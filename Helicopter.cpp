@@ -17,7 +17,8 @@ void Helicopter::set_name(std::string new_name) {
 void Helicopter::fly(int headwind, int minutes) {
     float fuel_per_minute = (headwind >= 40 ? 0.004 : 0.0018);
     float fuel_consumption = fuel_per_minute * minutes + 0.0001 * (weight > 5670 ? (weight - 5670) : 0) * minutes;
-    if (fuel - fuel_consumption < 0.2) {
+    fuel_consumption *= 100;
+    if (fuel - fuel_consumption < 20) {
         return;
     }
     fuel -= fuel_consumption;

@@ -9,7 +9,7 @@ AirVehicle::AirVehicle(int w): weight(w) {
 AirVehicle::AirVehicle(): AirVehicle(0) {}
 
 void AirVehicle::refuel() {
-    fuel = 1;
+    fuel = 100;
 }
 
 void AirVehicle::fly(int headwind, int minutes) {

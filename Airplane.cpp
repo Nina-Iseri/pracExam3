@@ -18,7 +18,8 @@ void Airplane::reducePassengers(int x) {
 void Airplane::fly(int headwind, int minutes) {
     float fuel_per_minute = (headwind >= 60 ? 0.005 : 0.0025);
     float fuel_consumption = fuel_per_minute * minutes + 0.00001 * numPassengers * minutes;
-    if (fuel - fuel_consumption < 0.2) {
+    fuel_consumption *= 100;
+    if (fuel - fuel_consumption < 20) {
         return;
     }
     fuel -= fuel_consumption;
