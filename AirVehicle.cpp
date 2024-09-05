@@ -2,7 +2,7 @@
 
 
 AirVehicle::AirVehicle(int w): weight(w) {
-    fuel = 1;  // initial 100%
+    fuel = 100;  // initial 100%
     numberOfFlights = 0;
 }
 
